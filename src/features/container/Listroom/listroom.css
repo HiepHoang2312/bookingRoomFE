@@ -1,0 +1,66 @@
+#list-room.content_room {
+  position: absolute;
+  color: white;
+  top: 80%;
+  left: 10%;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  text-shadow: #000000 1px 0 10px;
+}
+#list-room .img {
+  overflow: hidden;
+}
+#list-room ul li {
+  list-style-type: none;
+}
+
+#list-room ul {
+  padding-left: 0;
+}
+#list-room .active {
+  color: red;
+}
+#list-room .img img {
+  transition: 0.5s;
+  width: 400px;
+  height: 450px;
+}
+#list-room a:hover img {
+  transform: scale(1.05);
+}
+#list-room .money {
+  font-size: 1rem;
+}
+#list-room .ant-rate {
+  font-size: 1.2rem;
+}
+@media (max-width: 1125px) {
+  #list-room .ant-rate {
+    font-size: 0.9rem;
+  }
+  #list-room .content_room {
+    top: 74%;
+  }
+  #list-room .img img {
+    transition: 0.5s;
+    width: 350px;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  #list-room .title_room {
+    font-size: 0.9rem;
+  }
+  #list-room .money {
+    margin-left: 0 !important;
+  }
+  #list-room .content_room {
+    top: 55%;
+  }
+  #list-room .img img {
+    transition: 0.5s;
+    width: 300px;
+    height: 320px;
+  }
+}
