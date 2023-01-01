@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Popconfirm, Spin, Table } from "antd";
-import { Link, useHistory, useRouteMatch } from "react-router-dom";
+import { Link, NavLink, useHistory, useRouteMatch } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import { quocgiaData, removequocgia, updatequocgia } from "./quocgiaSlice";
@@ -103,11 +103,11 @@ function Quocgia() {
       </div>
       <div className="content">
         <div className="add">
-          <div to={`${match.url}/themquocgia`}>
+          <NavLink to={`${match.url}/themquocgia`}>
             <Button variant="outlined" color="secondary">
               <i className="fas fa-plus"></i>&nbsp;&nbsp; Thêm mới
             </Button>
-          </div>
+          </NavLink>
         </div>
         {loading ? (
           <div className="spin">

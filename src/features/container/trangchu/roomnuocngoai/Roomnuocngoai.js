@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 function Roomnuocngoai(props) {
   const rooms = useSelector((state) => state.rooms);
-  console.log(rooms, "000");
   const room = [];
   const formatdate = (e) => {
     if (e) {

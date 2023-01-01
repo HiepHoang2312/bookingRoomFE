@@ -1,10 +1,18 @@
 import { Spin } from "antd";
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import renderHTML from "react-render-html";
 import { useParams } from "react-router-dom";
+import { roomData } from "./roomSlice";
 function Chitietquocgia(props) {
   const { id } = useParams();
+  const dispatch = useDispatch();
+  const actionResult = async () => await dispatch(roomData());
+  useEffect(() => {
+    actionResult();
+  }, []);
+  const rooms = useSelector((state) => state.rooms);
+  console.log(rooms, "PP");
   const room = useSelector((state) =>
     state.rooms.room.data.find((x) => x.id === +id),
   );

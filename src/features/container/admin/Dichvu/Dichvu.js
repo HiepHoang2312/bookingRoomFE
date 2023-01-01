@@ -98,7 +98,7 @@ function Dichvu() {
               mota: <span>{ok.mota}</span>,
               icon: (
                 <span
-                  className={`${ok.icon} text-success`}
+                  className={`${ok?.icon} text-success`}
                   style={{ fontSize: "1.5rem" }}
                 ></span>
               ),

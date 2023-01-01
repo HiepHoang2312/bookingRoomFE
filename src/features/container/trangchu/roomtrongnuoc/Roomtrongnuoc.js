@@ -77,23 +77,23 @@ function Roomtrongnuoc(props) {
     return (money - money * (km / 100)).toLocaleString();
   };
   return (
-    <div className="mt-5 mb-5 room " id="room">
+    <div className="mt-5 mb-5 room mb-4" id="room">
       <div className="heading text-center">
-        <span>du lịch trong nước</span>
+        <span>Danh sách phòng</span>
         <div className="hr"></div>
         <p className="mb-4">
-          Du lịch trong nước luôn là lựa chọn tuyệt vời. Những thành phố nhộn
-          nhịp, nền văn hóa độc đáo và hấp dẫn.
+          Hãy tìm kiếm cho bản thân và gia đình của bạn một nơi nghỉ ngơi lý
+          tưởng !!!
         </p>
       </div>
       <div className="container">
         <div className="row justify-content-center">
-          {room.length === 0 ? (
+          {rooms?.length === 0 ? (
             <div className="spin">
               <Spin />
             </div>
           ) : (
-            room.map((ok) => (
+            rooms?.map((ok) => (
               <div className="col-md-4 mb-2" key={ok.id}>
                 {ok.Khuyenmais.length === 0 ? (
                   ""

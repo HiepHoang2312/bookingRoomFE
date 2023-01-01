@@ -17,7 +17,6 @@ import roomngaydiApi from "../../../../api/roomNgaydi";
 import quocgiaApi from "../../../../api/quocgiaApi";
 import roomdiadiemApi from "../../../../api/roomDiadiem";
 import anhApi from "../../../../api/anhApi";
-import roomApi from "../../../../api/roomApi";
 
 function getBase64(file) {
   return new Promise((resolve, reject) => {
@@ -152,7 +151,7 @@ function Themroom(props) {
       setchitietroom(room.chitietroom);
       setlaydiadiem(diadiemData);
     }
-  }, [id, rooms, state]);
+  }, [id, rooms]);
   const loairoom = useSelector((state) => state.loairooms.loairoom.data);
   const dichvu = useSelector((state) => state.dichvus.dichvu.data);
   const loadloairoom = useSelector((state) => state.loairooms.loading);
@@ -513,7 +512,7 @@ function Themroom(props) {
               aria-describedby="helpId"
             />
           </div>
-          <div className="form-group">
+          {/* <div className="form-group">
             <label htmlFor="">Vị trí</label>
             <br />
             <Select className="w-50" value={vitri} onChange={hangdlevitri}>
@@ -521,7 +520,7 @@ function Themroom(props) {
               <Option value={2}>Nước ngoài</Option>
             </Select>
             <br />
-          </div>
+          </div> */}
           <div className="form-group">
             <label htmlFor="">Thêm poster</label>
             <div>

@@ -29,7 +29,7 @@ function Dichvu(props) {
               <div className="row justify-content-center pb-5 text-center">
                 {!dichvus
                   ? ""
-                  : dichvu.map((ok) => (
+                  : dichvu?.map((ok) => (
                       <div className="col-md-4" key={ok.id}>
                         <div className="icon">
                           <span className={ok.icon}></span>

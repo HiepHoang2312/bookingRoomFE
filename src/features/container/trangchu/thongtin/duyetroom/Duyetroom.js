@@ -44,6 +44,7 @@ export default function Duyetroom() {
   useEffect(() => {
     actionResult();
   }, []);
+  console.log(hoadon, "1");
   return (
     <div className="duyetroom">
       <div className="duyetroom__header">
@@ -52,21 +53,21 @@ export default function Duyetroom() {
       </div>
       <div className="container">
         <div className="duyetroom__content">
-          {hoadon.length === 0
+          {hoadon?.length === 0
             ? ""
-            : hoadon.map((ok, index) => (
+            : hoadon?.map((ok, index) => (
                 <div className="duyetroom__box" key={index}>
                   <div className="duyetroom--name">{ok.diadiemdi}</div>
                   <div className="duyetroom--form">
                     <div className="giaroom">
-                      {ok.giatien.toLocaleString()} vnđ
+                      {ok?.giatien.toLocaleString()} vnđ
                     </div>
                   </div>
                   <div className="btn__room">
                     <Popconfirm
                       title="Bạn có chắc chắn？"
                       onConfirm={() => {
-                        dongy(ok.id);
+                        dongy(ok?.id);
                       }}
                       icon={
                         <QuestionCircleOutlined style={{ color: "green" }} />

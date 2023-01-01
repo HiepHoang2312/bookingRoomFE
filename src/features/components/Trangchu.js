@@ -17,7 +17,6 @@ export class Trangchu extends Component {
         <Camnangdulich />
         <CreateRoom />
         <Roomtrongnuoc />
-        <Roomnuocngoai />
         <Dichvu />
         <Tintuc />
         <Ykienkhachhang />
