@@ -7,7 +7,7 @@ function CreateRoom(props) {
     <div>
       <div className="mb-5 room">
         <div className="heading text-center pt-5">
-          <span>Tạo phòng của riêng mình</span>
+          <span>Tạo chuyến đi của riêng mình</span>
           <div className="hr"></div>
           <p className="mb-4">
             Tự tạo cho mình một lộ trình thú vị để có một kỳ nghỉ đáng nhớ hơn.

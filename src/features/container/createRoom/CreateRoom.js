@@ -79,10 +79,10 @@ export default function CreateRoom() {
       </div>
       <div className="title-new">
         <div className="hr-new "></div>
-        <h3>Tạo chuyến đi</h3>
+        <h3>Tạo mong muốn</h3>
       </div>
       <div className="container mb-5">
-        <div className="head--text">Tạo phòng</div>
+        <div className="head--text">Tạo mong muốn</div>
         <div className="head--content">
           <form action="" onSubmit={onSubmit} method="post">
             <Select
@@ -91,7 +91,11 @@ export default function CreateRoom() {
               style={{ width: 200 }}
               onChange={handleNoixuatphat}
             >
-              <Option key="vinh">Vinh</Option>
+              {!diadiem
+                ? ""
+                : diadiem.map((data) => (
+                    <Option key={data.name}>{data.name}</Option>
+                  ))}
             </Select>
             <Select
               mode="multiple"
@@ -123,7 +127,7 @@ export default function CreateRoom() {
               icon={<QuestionCircleOutlined style={{ color: "green" }} />}
             >
               <Button type="submit" color="primary" variant="contained">
-                Tạo chuyến đi
+                Gửi
               </Button>
             </Popconfirm>
           </form>

@@ -48,7 +48,7 @@ export default function Duyetroom() {
   return (
     <div className="duyetroom">
       <div className="duyetroom__header">
-        <h3 className="text-center">Duyệt phòng</h3>
+        <h3 className="text-center">Duyệt chuyến đi</h3>
         <div className="hr"></div>
       </div>
       <div className="container">

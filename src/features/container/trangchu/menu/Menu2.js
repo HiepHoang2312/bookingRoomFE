@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import logo from "./../../../images/logoTravel.png";
-import { Link as Linkrt } from "react-router-dom";
+import logo from "./../../../images/logo_bdu.png";
+import { Link, Link as Linkrt } from "react-router-dom";
 import "./menu.css";
 import Avatar from "antd/lib/avatar/avatar";
 import { Menu, Dropdown, Drawer, message } from "antd";
@@ -110,9 +110,14 @@ function ListMenu(props) {
   };
   const ss = (
     <Menu>
-      <Menu.Item key="0">
-        <Linkrt to="/dangnhap">Đăng nhập</Linkrt>
-      </Menu.Item>
+      {users ? (
+        <div></div>
+      ) : (
+        <Menu.Item key="0">
+          <Linkrt to="/dangnhap">Đăng nhập</Linkrt>
+        </Menu.Item>
+      )}
+
       <Menu.Item key="2">
         <span onClick={showDrawer}>Xem thông tin</span>
       </Menu.Item>
@@ -120,7 +125,7 @@ function ListMenu(props) {
         phanquyen() ? (
           <Menu.Item key="3">
             <Linkrt to="/admin" className="nav-link">
-              Quản lý admin
+              Quản lý
             </Linkrt>
           </Menu.Item>
         ) : (
@@ -266,16 +271,17 @@ function ListMenu(props) {
               </li>
               <li className="nav-item">
                 <div className="border-bot-menu">
-                  <Linkrt className="nav-link" to="/list-room">
-                    Phòng du lịch
-                  </Linkrt>
-                </div>
-              </li>
-              <li className="nav-item">
-                <div className="border-bot-menu">
-                  <Linkrt className="nav-link" to="/hotels">
-                    Khách sạn
-                  </Linkrt>
+                  <Link
+                    className="nav-link"
+                    activeClass="active"
+                    to="list-room"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    Phòng khách sạn
+                  </Link>
                 </div>
               </li>
               <li className="nav-item">

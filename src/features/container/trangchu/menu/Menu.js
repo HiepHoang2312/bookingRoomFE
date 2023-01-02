@@ -115,9 +115,13 @@ function ListMenu(props) {
   };
   const ss = (
     <Menu>
-      <Menu.Item key="0">
-        <Linkrt to="/dangnhap">Đăng nhập</Linkrt>
-      </Menu.Item>
+      {users ? (
+        <div></div>
+      ) : (
+        <Menu.Item key="0">
+          <Linkrt to="/dangnhap">Đăng nhập</Linkrt>
+        </Menu.Item>
+      )}
       <Menu.Item key="2">
         <span onClick={showDrawer}>Xem thông tin</span>
       </Menu.Item>
@@ -128,7 +132,7 @@ function ListMenu(props) {
         phanquyen() ? (
           <Menu.Item key="3">
             <Linkrt to="/admin" className="nav-link">
-              Quản lý admin
+              Quản lý
             </Linkrt>
           </Menu.Item>
         ) : (

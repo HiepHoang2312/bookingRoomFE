@@ -97,6 +97,7 @@ export default function Nav() {
       </Route>
     </div>
   );
+
   const quanlybinhluan = (
     <div>
       <Route exact path={match.path}>
@@ -709,7 +710,7 @@ export default function Nav() {
       case "quản lý bình luận":
         return menu_quanlybinhluan;
         break;
-      case "quản lý room":
+      case "hotelier":
         return menu_quanlyroom;
         break;
       default:
@@ -721,6 +722,7 @@ export default function Nav() {
       case "admin":
         return admin;
         break;
+
       case "quản lý tin tức":
         return quanlytintuc;
         break;
@@ -730,7 +732,7 @@ export default function Nav() {
       case "quản lý bình luận":
         return quanlybinhluan;
         break;
-      case "quản lý room":
+      case "hotelier":
         return quanlyroom;
         break;
       default:

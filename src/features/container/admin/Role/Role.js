@@ -45,19 +45,19 @@ function Role() {
       if (userrole[i].roleId === 1) {
         admin.push(userrole[i]);
       }
-      if (userrole[i].roleId === 2) {
+      if (userrole[i].roleId === 3) {
         quanlytintuc.push(userrole[i]);
       }
       if (userrole[i].roleId === 3) {
         quanlybinhluan.push(userrole[i]);
       }
-      if (userrole[i].roleId === 4) {
+      if (userrole[i].roleId === 3) {
         quanlyroom.push(userrole[i]);
       }
-      if (userrole[i].roleId === 5) {
+      if (userrole[i].roleId === 3) {
         bientapvien.push(userrole[i]);
       }
-      if (userrole[i].roleId === 6) {
+      if (userrole[i].roleId === 2) {
         nguoidung.push(userrole[i]);
       }
     }

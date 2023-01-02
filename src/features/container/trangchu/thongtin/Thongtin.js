@@ -36,7 +36,7 @@ export default function Thongtin() {
             <TabPane tab="Phòng đã đặt" key="1">
               <Lichsu />
             </TabPane>
-            <TabPane tab="Duyệt phòng" key="2">
+            <TabPane tab="Duyệt chuyến đi" key="2">
               <Duyetroom />
             </TabPane>
           </Tabs>
