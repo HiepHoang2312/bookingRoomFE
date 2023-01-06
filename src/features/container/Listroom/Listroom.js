@@ -122,11 +122,7 @@ export default function Listroom() {
           </div>
           <div className="col-md-9">
             <div className="title text-center mt-3">
-              {state.check === "trong" ? (
-                <h3>Phòng trong nước</h3>
-              ) : (
-                <h3>Phòng nước ngoài</h3>
-              )}
+              <h3>Danh sách</h3>
               <div className="hr w-25"></div>
             </div>
             <div className="box-room">

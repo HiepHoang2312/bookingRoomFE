@@ -341,7 +341,7 @@ function ListMenu(props) {
                 offset={-70}
                 duration={500}
               >
-                Phòng khách sạn
+                Danh sách
               </Link>
             </li>
 

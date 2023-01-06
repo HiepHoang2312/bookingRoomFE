@@ -46,7 +46,7 @@
   );
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 ); 
 } */
-.icon_footer{
+.icon_footer {
   background-color: white;
   width: 2.5rem;
   height: 2.5rem;
@@ -58,9 +58,13 @@
   align-items: center;
   font-size: 1.2rem;
   color: white;
-  transition: .5s;
+  transition: 0.5s;
   position: relative;
 }
-.icon_footer:hover{
+.icon_footer:hover {
   transform: scale(1.2);
+}
+.foooter {
+  display: flex;
+  justify-content: center;
 }

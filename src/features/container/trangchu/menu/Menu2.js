@@ -117,7 +117,9 @@ function ListMenu(props) {
           <Linkrt to="/dangnhap">Đăng nhập</Linkrt>
         </Menu.Item>
       )}
-
+      <Menu.Item key="4">
+        <Linkrt to="/thongtin/0">Xem lịch sử</Linkrt>
+      </Menu.Item>
       <Menu.Item key="2">
         <span onClick={showDrawer}>Xem thông tin</span>
       </Menu.Item>
@@ -274,13 +276,13 @@ function ListMenu(props) {
                   <Link
                     className="nav-link"
                     activeClass="active"
-                    to="list-room"
+                    to="/list-room"
                     spy={true}
                     smooth={true}
                     offset={-70}
                     duration={500}
                   >
-                    Phòng khách sạn
+                    Danh sách
                   </Link>
                 </div>
               </li>

@@ -21,9 +21,11 @@ export default function Duyetroom() {
   const hoadon = [];
   if (hoadoncanhans && infor) {
     for (let i = 0; i < hoadoncanhans.length; i++) {
+      console.log();
       if (
         hoadoncanhans[i].userId === infor.id &&
-        hoadoncanhans[i].agree === 0
+        hoadoncanhans[i].agree === 0 &&
+        hoadoncanhans[i].kiemduyet === 1
       ) {
         hoadon.push(hoadoncanhans[i]);
       }
@@ -44,7 +46,6 @@ export default function Duyetroom() {
   useEffect(() => {
     actionResult();
   }, []);
-  console.log(hoadon, "1");
   return (
     <div className="duyetroom">
       <div className="duyetroom__header">
@@ -53,15 +54,15 @@ export default function Duyetroom() {
       </div>
       <div className="container">
         <div className="duyetroom__content">
-          {hoadon?.length === 0
-            ? ""
-            : hoadon?.map((ok, index) => (
+          {hoadon?.length !== 0
+            ? hoadon?.map((ok, index) => (
                 <div className="duyetroom__box" key={index}>
                   <div className="duyetroom--name">{ok.diadiemdi}</div>
                   <div className="duyetroom--form">
                     <div className="giaroom">
-                      {ok?.giatien.toLocaleString()} vnđ
+                      {ok?.giatien?.toLocaleString()} vnđ
                     </div>
+                    <div className="giaroom">{ok?.luuy}</div>
                   </div>
                   <div className="btn__room">
                     <Popconfirm
@@ -96,7 +97,8 @@ export default function Duyetroom() {
                     </Popconfirm>
                   </div>
                 </div>
-              ))}
+              ))
+            : ""}
         </div>
       </div>
     </div>

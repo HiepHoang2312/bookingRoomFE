@@ -14,6 +14,7 @@ export default function CreateRoom() {
   const [nxp, setnxp] = useState("");
   const [td, settd] = useState("");
   const diadiems = useSelector((state) => state.diadiems.diadiem.data);
+
   let diadiem = [];
   if (diadiems) {
     for (let i = 0; i < diadiems.length; i++) {
@@ -43,25 +44,27 @@ export default function CreateRoom() {
     dt.setMinutes(0);
     return date < dt;
   };
+  console.log("klasdnakls", infor?.id);
   const onSubmit = () => {
     //e.preventDefault();
-    if (date !== "" && td !== "" && td.length !== 0 && nxp !== "") {
-      if (!compare(date)) {
-        message.warning("Ngày khởi hành không phù hợp!");
+    if (infor?.id) {
+      if (date !== "" && td !== "" && td.length !== 0 && nxp !== "") {
+        if (!compare(date)) {
+          message.warning("Ngày khởi hành không phù hợp!");
+        } else {
+          hoadoncanhanApi.posthoadoncanhan({
+            userId: infor.id,
+            noikhoihanh: nxp,
+            ngaykhoihanh: date1,
+            diadiemdi: td.join(", "),
+            kiemduyet: 0,
+            agree: 0,
+          });
+        }
       } else {
-        console.log(td.join(", "), nxp, date1, infor.id);
-        hoadoncanhanApi.posthoadoncanhan({
-          userId: infor.id,
-          noikhoihanh: nxp,
-          ngaykhoihanh: date1,
-          diadiemdi: td.join(", "),
-          kiemduyet: 0,
-          agree: 0,
-        });
+        message.warning("Bạn chưa nhập đầy đủ thông tin!");
       }
-    } else {
-      message.warning("Bạn chưa nhập đầy đủ thông tin!");
-    }
+    } else message.warning("Bạn chưa đăng nhập!");
   };
   return (
     <div id="create-room">

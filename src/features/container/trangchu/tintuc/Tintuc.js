@@ -54,7 +54,7 @@ function Tintuc(props) {
     <div id="news">
       <div className="heading text-center">
         <span>
-          <Link to="/listtintuc">Tin tức du lịch</Link>
+          <Link to="/listtintuc">Tin tức</Link>
         </span>
         <div className="hr"></div>
         <p className="mb-4">

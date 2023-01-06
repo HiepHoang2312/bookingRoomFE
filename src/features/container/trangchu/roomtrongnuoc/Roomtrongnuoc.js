@@ -79,7 +79,7 @@ function Roomtrongnuoc(props) {
   return (
     <div className="mt-5 mb-5 room mb-4" id="room">
       <div className="heading text-center">
-        <span>Danh sách phòng</span>
+        <span>Danh sách</span>
         <div className="hr"></div>
         <p className="mb-4">
           Hãy tìm kiếm cho bản thân và gia đình của bạn một nơi nghỉ ngơi lý
@@ -95,7 +95,7 @@ function Roomtrongnuoc(props) {
           ) : (
             rooms?.map((ok) => (
               <div className="col-md-4 mb-2" key={ok.id}>
-                {ok.Khuyenmais.length === 0 ? (
+                {ok.Khuyenmais.length === 0 && ok.Khuyenmais.length < 6 ? (
                   ""
                 ) : ok.Khuyenmais[0].status === 0 ? (
                   ""

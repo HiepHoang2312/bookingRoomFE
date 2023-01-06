@@ -378,18 +378,14 @@ function Room(props) {
                 <div className="row justify-content-center">
                   <div className="col-lg-8">
                     <Carousel autoplay>
-                      {rooms
-                        .find((x) => x.id === +id)
-                        .Anhs.map((oki) => (
-                          <div>
-                            <img
-                              src={oki.link}
-                              width="760px"
-                              height="430px"
-                              alt=""
-                            />
-                          </div>
-                        ))}
+                      <div>
+                        <img
+                          src={ok?.avatar}
+                          width="760px"
+                          height="430px"
+                          alt=""
+                        />
+                      </div>
                     </Carousel>
                   </div>
                   <div className="col-lg-4 position-relative ">
@@ -514,7 +510,11 @@ function Room(props) {
                           vnd
                         </span>
                         <br />
-                        <span>Số chỗ còn lại: {songuoiconlai(ok.songuoi)}</span>
+                        <span>
+                          {songuoiconlai(ok.songuoi) === 0
+                            ? "Đã hết chỗ"
+                            : `Số người tối đa ${songuoiconlai(ok.songuoi)}`}
+                        </span>
                       </div>
                     </div>
                   </div>

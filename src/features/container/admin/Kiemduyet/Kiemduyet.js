@@ -107,7 +107,7 @@ function Kiemduyet() {
   return (
     <div id="admin">
       <div className="heading">
-        <h4>Kiểm duyệt phòng cá nhân</h4>
+        <h4>Kiểm duyệt </h4>
         <div className="hr"></div>
       </div>
       <div className="content">

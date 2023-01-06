@@ -47,14 +47,14 @@ export default function Listtintuc() {
               </Link>
             </li>
             <li className="breadcrumb-item active" aria-current="page">
-              Phòng du lịch
+              Tin tức
             </li>
           </ol>
         </nav>
       </div>
       <div className="title-new">
         <div className="hr-new "></div>
-        <h3 className=" ">Tin tức du lịch </h3>
+        <h3 className=" ">Tin tức </h3>
       </div>
       <div className="content-new">
         <div className="box-new ">

@@ -4,7 +4,7 @@ import tk from "./../../images/tk.png";
 import mk from "./../../images/mk.png";
 import { BrowserRouter as Router, Link, useHistory } from "react-router-dom";
 import { Button } from "@material-ui/core";
-import { message, Select } from "antd";
+import { message } from "antd";
 import taikhoanApi from "../../../api/taikhoanApi";
 
 function Dangky(props) {
@@ -16,7 +16,6 @@ function Dangky(props) {
     email: "",
   });
   const { password, repassword, status, name, email } = state;
-  const [userRoleId, setUserRoleId] = useState(2);
   const validateEmail = (email) => {
     const re =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -44,8 +43,7 @@ function Dangky(props) {
             ) {
               message.error("Email đã được sử dụng!");
             } else {
-              var UserRoles = [{ roleId: userRoleId }];
-              console.log(UserRoles, "UserRoles");
+              var UserRoles = [{ roleId: 2 }];
               taikhoanApi.postuser({
                 name,
                 status,
@@ -70,9 +68,7 @@ function Dangky(props) {
       [e.target.name]: e.target.value,
     });
   };
-  const onUserRoleChange = (value) => {
-    setUserRoleId(value);
-  };
+
   const history = useHistory();
   const handgleLG = () => {
     history.push("/dangnhap");
@@ -103,23 +99,7 @@ function Dangky(props) {
                 aria-describedby="addon-wrapping"
               />
             </div>
-            <div className="input-group flex-nowrap mt-3 mb-3">
-              <div className="input-group-prepend">
-                <span className="input-group-text" id="addon-wrapping">
-                  <img src={tk} className="img-login float-left" alt="" />
-                </span>
-              </div>
-              <Select
-                placeholder="Bạn là"
-                className="mr-2 fromSelect"
-                style={{ width: 200 }}
-                onChange={onUserRoleChange}
-                defaultValue={2}
-              >
-                <Select.Option value={2}>Người dùng</Select.Option>
-                <Select.Option value={3}>Người cho thuê</Select.Option>
-              </Select>
-            </div>
+
             <div className="input-group flex-nowrap mt-3 mb-3">
               <div className="input-group-prepend">
                 <span className="input-group-text" id="addon-wrapping">
